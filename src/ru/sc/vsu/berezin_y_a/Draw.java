@@ -9,17 +9,17 @@ import java.io.File;
 
 public class Draw {
 
-    public static void paintRectangle(Graphics2D g2d,int windth, int height,int levelCount,boolean flag){
+    public static void paintRectangle(Graphics2D g2d,int width, int height,int levelCount,boolean flag){
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
         Color color = g2d.getColor();
         g2d.setColor(Color.WHITE);
-        g2d.fillRect(0,0,windth,height);
+        g2d.fillRect(0,0,width,height);
         g2d.setColor(color);
         if (flag) {
-            paintRectangleLevelUp(g2d, windth / 2, height / 2, windth / 2, levelCount);
+            paintRectangleLevelUp(g2d, width / 2, height / 2, width / 2, levelCount);
         }
         else{
-            paintRectangleLevelDown(g2d, windth / 2, height / 2, windth / 2, levelCount);
+            paintRectangleLevelDown(g2d, width / 2, height / 2, width / 2, levelCount);
         }
     }
     private static void paintRectangleLevelUp(Graphics2D g2d, double x, double y, double a,int level){
